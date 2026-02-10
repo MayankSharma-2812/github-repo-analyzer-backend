@@ -1,19 +1,53 @@
 {
-  "name": "server",
-  "module": "index.ts",
+  "name": "github-repo-analyzer-server",
+  "version": "1.0.0",
+  "description": "AI-powered GitHub repository analyzer API",
+  "main": "src/index.ts",
   "type": "module",
   "private": true,
-  "devDependencies": {
-    "@types/bun": "latest",
-    "@types/express": "^5.0.6"
+  "author": {
+    "name": "Mayank Sharma",
+    "email": "mayank.sharma@example.com",
+    "url": "https://github.com/MayankSharma-2812"
   },
-  "peerDependencies": {
-    "typescript": "^5"
+  "keywords": [
+    "github",
+    "repository",
+    "analyzer",
+    "api",
+    "typescript",
+    "express",
+    "bun",
+    "ai"
+  ],
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "start": "bun src/index.ts",
+    "build": "bun build",
+    "test": "bun test",
+    "lint": "bun run lint",
+    "type-check": "tsc --noEmit"
+  },
+  "engines": {
+    "bun": ">=1.0.0",
+    "node": ">=18.0.0"
   },
   "dependencies": {
     "axios": "^1.13.5",
     "cors": "^2.8.6",
     "dotenv": "^17.2.4",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "zod": "^3.22.4",
+    "@octokit/rest": "^20.0.2"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^5.0.6",
+    "@types/cors": "^2.8.17",
+    "typescript": "^5.0.0",
+    "bun-types": "^1.0.12"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
   }
 }
